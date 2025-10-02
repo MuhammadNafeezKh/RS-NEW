@@ -1,0 +1,248 @@
+  /* Reset & Body */
+  body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+  }
+
+  /* Header */
+  header {
+      background: #1E1E2F;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .logo h1 {
+      margin-left: 10px;
+  }
+  nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+  }
+  nav li {
+      margin: 0;
+  }
+  nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  nav a:hover {
+      border-bottom: 2px solid #2E1A47;
+  }
+
+  /* Hero Section */
+  .hero-sec {
+    background-image: url("https://mrwallpaper.com/images/hd/1200x480-pink-cloudy-sunset-sky-0wz4djhn4bmq18e0.jpg"); 
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
+  }
+
+  .hero-sec::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* overlay gelap biar teks kebaca */
+  }
+  .hero-con {
+    position: relative; /* supaya teks di atas overlay */
+    z-index: 1;
+  }
+
+  .hero-con h3 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .hero-con p {
+    font-size: 1.2rem;
+    color: #ddd;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Button */
+  .rounded-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .rounded-btn:hover {
+    background-color:#2E1A47;
+  }
+
+  /* Dokter Section */
+  .dok {
+    padding: 2rem;
+    text-align: center;
+  }
+  .dok h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .dok-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .dok-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #fff;
+  }
+  .dok-item img {
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .dok-item p {
+    padding: 0.5rem;
+    background-color: #f2f2f2;
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+  }
+  .dok-item {
+    position: relative; /* biar overlay bisa nempel di dalam */
+  }
+
+  .dok-item .overlay {
+    position: absolute;
+    inset: 0; /* full nutup gambar */
+    background: rgba(0,0,0,0.65);
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .dok-item:hover .overlay {
+    opacity: 1;
+  }
+
+  .dok-item .overlay h4 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+  }
+
+  .dok-item .overlay p {
+    margin: 0 0 5px;
+    font-size: 0.9rem;
+  }
+
+  .dok-item .overlay small {
+    font-size: 0.75rem;
+    opacity: 0.9;
+  }
+
+  /* Testimoni Section */
+  .testi {
+    padding: 2rem;
+    min-height: 500px;
+    text-align: center;
+    background: #fafafa;
+  }
+  .testi h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .testi-grid {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .testi-item {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .testi-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -60px;
+    margin-bottom: 1rem;
+  }
+  .testi-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .testi-item p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #1E1E2F;
+    color: #fff;
+    padding: 2rem;
+  }
+  .Footer-kiri h3 {
+    margin: 0;
+  }
+  .Footer-kiri p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  .Footer-kanan {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .Footer-grid h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  .Footer-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .Footer-grid li {
+    margin-bottom: 0.5rem;
+  }
+  .Footer-grid a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .Footer-grid a:hover {
+    border-bottom: 1px solid #2E1A47;
+  }
+  .footer-rev {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 1rem;
+    color: #ccc;
+  }
